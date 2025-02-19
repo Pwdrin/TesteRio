@@ -1,0 +1,76 @@
+
+/* Estilo padrão (desktop) */
+.slide-item {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+/* Pequeno zoom para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  .slide-item {
+    transform: scale(1.1); /* Aumenta 10% */
+  }
+}
+
+/* Zoom maior para telas muito pequenas (celulares menores) */
+@media (max-width: 480px) {
+  .slide-item {
+    transform: scale(1.1); /* Aumenta 20% */
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #128c95;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #128c95;
+  opacity: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background-color: #128c95;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px; 
+}
+
+/* Reduzindo tamanho da seta */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; 
+}
+
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 16px; 
+  }
+}
+
+/* Ajustes para telas muito pequenas (celulares menores) */
+@media (max-width: 480px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 12px; 
+  }
+}
